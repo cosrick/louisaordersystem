@@ -6,7 +6,7 @@ index.config(['$routeProvider', '$locationProvider', function($routeProvider,$lo
 		.when('/',{
 			templateUrl: 'template/home.html'
 		})
-		.when('/menu'{
+		.when('/menu',{
 			templateUrl: 'template/menu.html'
 		})
 		.otherwise({
