@@ -6,7 +6,7 @@ index.config(['$routeProvider', '$locationProvider', function($routeProvider,$lo
 		.when('/',{
 			templateUrl: 'template/home.html'
 		})
-		.when('/menu'{
+		.when('/menu',{
 			templateUrl: 'template/menu.html'
 		})
 		.otherwise({
@@ -15,3 +15,8 @@ index.config(['$routeProvider', '$locationProvider', function($routeProvider,$lo
     $locationProvider.html5Mode(true);
 }]);
 
+index.run(['$location', '$rootScope', function($location, $rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        $rootScope.title = current.$route.title;
+    });
+}]);
