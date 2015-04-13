@@ -1,0 +1,223 @@
+			<div class="inner-page padd">
+			
+				<!-- Inner page menu start -->
+				<div class="inner-menu">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4 col-sm-6">
+								<!-- Inner page menu list -->
+								<div class="menu-list">
+									<!-- Menu item heading -->
+									<h3>Drinks</h3>
+									<!-- Image for menu list -->
+									<img class="img-responsive" src="img/menu/beans-in-a-cup.jpg" alt="" />
+									<!-- Menu list items -->
+									<div class="menu-list-item" onclick="Print(0)">
+										<!-- Heading / Dish name -->
+										<a href="#" class="btn btn-danger btn-sm" >COFFEE</a>
+										<!-- Dish price -->
+										<span class="price pull-right"></span>
+										<div class="clearfix"></div>
+									</div>
+									<!-- Menu list items -->
+									<div class="menu-list-item" onclick="Print(1)">
+										<!-- Heading / Dish name -->
+										<a href="#" class="btn btn-danger btn-sm" >TAYLORS TEA</a>
+										<!-- Dish price -->
+										<span class="price pull-right"></span>
+										<div class="clearfix"></div>
+									</div>
+									<!-- Menu list items -->
+									<div class="menu-list-item" onclick="Print(2)">
+										<!-- Heading / Dish name -->
+										<a href="#" class="btn btn-danger btn-sm" >FRUIT TEA</a>
+										<!-- Dish price -->
+										<span class="price pull-right"></span>
+										<div class="clearfix"></div>
+									</div>
+									<!-- Menu list items -->
+									<div class="menu-list-item" onclick="Print(3)">
+										<!-- Heading / Dish name -->
+										<a href="#" class="btn btn-danger btn-sm" >FRAPPE</a>
+										<!-- Dish price -->
+										<span class="price pull-right"></span>
+										<div class="clearfix"></div>
+									</div>
+									<!-- Menu list items -->
+									<div class="menu-list-item " onclick="Print(4)" >
+										<!-- Heading / Dish name -->
+										<a href="#" class="btn btn-danger btn-sm" >TEA</a>
+										<!-- Dish price -->
+										<span class="price pull-right"></span>
+										<div class="clearfix"></div>
+									</div>
+									<!-- Menu list items -->
+									<div class="menu-list-item border-zero" onclick="Print(5)" >
+										<!-- Heading / Dish name -->
+										<a href="#" class="btn btn-danger btn-sm" >OTHERS</a>
+										<!-- Dish price -->
+										<span class="price pull-right"></span>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6">
+								<!-- Inner page menu list -->
+								<div class="menu-list" id = "0" style="display:block">
+									<!-- Menu item heading -->
+									<h3>COFFEE</h3>
+									<!-- Image for menu list 
+									<img class="img-responsive" src="img/menu/menu2.jpg" alt="" />-->
+									<!-- Menu list items -->
+									<?php 
+  										for($i = 0; $i < mysql_num_rows($coffee); $i++){
+  										$info = mysql_fetch_row($coffee);
+  										$drinkNum = $i+1 ;
+  									?>
+									<div class="menu-list-item">
+										<!-- Heading / Dish name -->
+										<h4 class="pull-left"><?php echo $drinkNum. "." .$info[1]; ?></h4>
+										<!-- Dish price -->
+										<span class="price pull-right">$<?php echo $info[2]; ?></span>
+										<div class="clearfix"></div>
+									</div>
+									<?php } ?> 
+								</div>
+
+
+								<div class="menu-list" id = "1" style="display:none">
+									<!-- Menu item heading -->
+									<h3>TAYLORS TEA</h3>
+									<?php 
+  										for($i = 0; $i < mysql_num_rows($taylors); $i++){
+  										$info = mysql_fetch_row($taylors) ;
+  										$drinkNum = $i+17 ;
+  									?>
+									<div class="menu-list-item">
+										<!-- Heading / Dish name -->
+										<h4 class="pull-left"><?php echo $drinkNum. "." .$info[1]; ?></h4>
+										<!-- Dish price -->
+										<span class="price pull-right">$<?php echo $info[2]; ?></span>
+										<div class="clearfix"></div>
+									</div>
+									<?php } ?> 
+									
+									
+								</div>
+
+								<div class="menu-list" id = "2" style="display:none">
+									<!-- Menu item heading -->
+									<h3>FRUIT TEA</h3>
+									<?php 
+  										for($i = 0; $i < mysql_num_rows($fruit); $i++){
+  										$info = mysql_fetch_row($fruit);
+  										$drinkNum = $i+ 24;
+  									?>
+									<div class="menu-list-item">
+										<!-- Heading / Dish name -->
+										<h4 class="pull-left"><?php echo $drinkNum. "." .$info[1]; ?></h4>
+										<!-- Dish price -->
+										<span class="price pull-right">$<?php echo $info[2]; ?></span>
+										<div class="clearfix"></div>
+									</div>
+									<?php } ?> 
+									
+									
+								</div>
+
+								<div class="menu-list" id = "3" style="display:none">
+									<!-- Menu item heading -->
+									<h3>FRAPPE</h3>
+									<?php 
+  										for($i = 0; $i < mysql_num_rows($frappe); $i++){
+  										$info = mysql_fetch_row($frappe);
+  										$drinkNum = $i+ 31;
+  									?>
+									<div class="menu-list-item">
+										<!-- Heading / Dish name -->
+										<h4 class="pull-left"><?php echo $drinkNum. "." .$info[1]; ?></h4>
+										<!-- Dish price -->
+										<span class="price pull-right">$<?php echo $info[2]; ?></span>
+										<div class="clearfix"></div>
+									</div>
+									<?php } ?> 
+									
+									
+								</div>
+
+
+								<div class="menu-list" id = "4" style="display:none">
+									<!-- Menu item heading -->
+									<h3>TEA</h3>
+									<?php 
+  										for($i = 0; $i < mysql_num_rows($tea); $i++){
+  										$info = mysql_fetch_row($tea);
+  										$drinkNum = $i+ 35;
+  									?>
+									<div class="menu-list-item">
+										<!-- Heading / Dish name -->
+										<h4 class="pull-left"><?php echo $drinkNum. "." .$info[1]; ?></h4>
+										<!-- Dish price -->
+										<span class="price pull-right">$<?php echo $info[2]; ?></span>
+										<div class="clearfix"></div>
+									</div>
+									<?php } ?> 
+									
+								</div>
+
+
+								<div class="menu-list" id = "5" style="display:none">
+									<!-- Menu item heading -->
+									<h3>OTHERS</h3>
+									<?php 
+  										for($i = 0; $i < mysql_num_rows($others); $i++){
+  										$info = mysql_fetch_row($others);
+  										$drinkNum = $i+ 43;
+  									?>
+									<div class="menu-list-item">
+										<!-- Heading / Dish name -->
+										<h4 class="pull-left"><?php echo $drinkNum. "." .$info[1]; ?></h4>
+										<!-- Dish price -->
+										<span class="price pull-right">$<?php echo $info[2]; ?></span>
+										<div class="clearfix"></div>
+									</div>
+									<?php } ?> 
+									
+								</div>
+							</div>
+				
+			
+					
+							
+
+
+						</div>
+					</div>
+				</div>
+		<script type="text/javascript" language="javascript">
+
+
+			function HideContent(d) {
+			document.getElementById(d).style.display = "none";
+			}
+			function ShowContent(d) {
+			document.getElementById(d).style.display = "block";
+			}
+			function ReverseDisplay(d) {
+			if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
+			else { document.getElementById(d).style.display = "none"; }
+			}
+			function Print(d){
+				for (var i = 0; i < 6; i++){
+					if (i==d){
+						document.getElementById(i).style.display = "block";
+					}
+				else {
+					document.getElementById(i).style.display = "none";
+				}
+			}
+			
+		}
+
+
+		</script>

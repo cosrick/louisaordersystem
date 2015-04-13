@@ -7,6 +7,10 @@ index.config(['$routeProvider', '$locationProvider', function($routeProvider,$lo
 			templateUrl: '/template/home.html',
 			controller: 'MainCtrl'
 		})
+		.when('/menu',{
+			templateUrl: '/template/menu.html'
+			controller: 'MenuCtrl'
+		})
 		.otherwise({
 			console.log('Hiiiiiiiiiii');
 			redirectTo: '/'
