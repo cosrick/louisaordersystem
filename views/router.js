@@ -4,10 +4,10 @@ index.config(['$routeProvider', '$locationProvider', function($routeProvider,$lo
 
 	$routeProvider
 		.when('/',{
-			templateUrl: 'template/home.html'
+			templateUrl: 'template/home.ejs'
 		})
 		.when('/menu',{
-			templateUrl: 'template/menu.html'
+			templateUrl: 'template/menu.ejs'
 		})
 		.otherwise({
 			redirectTo: '/'
@@ -15,8 +15,8 @@ index.config(['$routeProvider', '$locationProvider', function($routeProvider,$lo
     $locationProvider.html5Mode(true);
 }]);
 
-index.run(['$location', '$rootScope', function($location, $rootScope) {
+/*index.run(['$location', '$rootScope', function($location, $rootScope) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
         $rootScope.title = current.$route.title;
     });
-}]);
+}]);*/
