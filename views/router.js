@@ -12,11 +12,11 @@ index.config(['$routeProvider', '$locationProvider', function($routeProvider,$lo
 		.otherwise({
 			redirectTo: '/'
 		})
-    $locationProvider.html5Mode(true);
+    //$locationProvider.html5Mode(true);
 }]);
 
-index.run(['$location', '$rootScope', function($location, $rootScope) {
-    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-        $rootScope.title = current.$route.title;
-    });
-}]);
+// index.run(['$location', '$rootScope', function($location, $rootScope) {
+//     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+//         $rootScope.title = current.$route.title;
+//     });
+// }]);

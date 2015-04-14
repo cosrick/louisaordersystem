@@ -9,6 +9,12 @@ Designed by : http://responsivewebinc.com
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
 
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
 /* 
  * Basic CSS starts
  */
@@ -485,7 +491,7 @@ table { background: #fff; }
  * -	SETTINGS FOR BANNER CONTAINERS	-
  */
 
-.tp-banner-container{
+/*.tp-banner-container{
 	width:100%;
 	position:relative;
 	padding:0;
@@ -546,7 +552,7 @@ table { background: #fff; }
 	font-weight: 300;
 	font-size: 14px;
 	line-height: 24px;
-} 
+} */
 
 /*
  * Default Heading
