@@ -491,6 +491,11 @@ table { background: #fff; }
  * -	SETTINGS FOR BANNER CONTAINERS	-
  */
 
+
+#myCarousel{
+	height: 500px;
+	overflow: hidden;
+}
 /*.tp-banner-container{
 	width:100%;
 	position:relative;
