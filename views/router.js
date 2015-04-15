@@ -22,15 +22,15 @@ var index = angular.module('index', ['ui.router']);
 //     });
 // }]);
 
-index.config(function($stateProvider, $urlRouterProvider) {
+index.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
   
   // For any unmatched url, redirect to /state1
   $urlRouterProvider.otherwise("/home");
-  
+  $locationProvider.html5Mode(true);
   // Now set up the states
   $stateProvider
     .state('home', {
-      url: "/home",
+      url: "/",
       templateUrl: "template/home.html"
     })
     // .state('state1.list', {
@@ -54,6 +54,10 @@ index.config(function($stateProvider, $urlRouterProvider) {
 	.state('aboutus', {
       url: "/aboutus",
       templateUrl: "template/aboutus.html"
+    })
+    .state('login', {
+      url: "/login",
+      templateUrl: "template/login.html"
     });
 });
 
