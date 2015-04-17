@@ -13,7 +13,7 @@ index.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
   $stateProvider
     .state('home', {
       url: "/",
-      templateUrl: "template/home.html"
+      templateUrl: "template/home.ejs"
     })
     // .state('state1.list', {
     //   url: "/list",
@@ -24,10 +24,10 @@ index.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
     // })
     .state('menu', {
       url: "/menu",
-      templateUrl: "template/menu.html"
-      controller('menuController', ['', function(){
+      templateUrl: "template/menu.ejs",
+      // controller('menuController', ['', function(){
       	
-      }])
+      // }])
     })
     // .state('state2.list', {
     //   url: "/list",
