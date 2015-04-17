@@ -69,121 +69,37 @@
 									<!-- Image for menu list 
 									<img class="img-responsive" src="img/menu/menu2.jpg" alt="" />-->
 									<!-- Menu list items -->
-									<?php 
-  										for($i = 0; $i < mysql_num_rows($coffee); $i++){
-  										$info = mysql_fetch_row($coffee);
-  										$drinkNum = $i+1 ;
-  									?>
+									
 									<div class="menu-list-item">
 										<!-- Heading / Dish name -->
-										<h4 class="pull-left"><?php echo $drinkNum. "." .$info[1]; ?></h4>
+										<h4 class="pull-left"></h4>
 										<!-- Dish price -->
-										<span class="price pull-right">$<?php echo $info[2]; ?></span>
+										<span class="price pull-right"></span>
 										<div class="clearfix"></div>
 									</div>
-									<?php } ?> 
+									
 								</div>
 
 
 								<div class="menu-list" id = "1" style="display:none">
 									<!-- Menu item heading -->
 									<h3>TAYLORS TEA</h3>
-									<?php 
-  										for($i = 0; $i < mysql_num_rows($taylors); $i++){
-  										$info = mysql_fetch_row($taylors) ;
-  										$drinkNum = $i+17 ;
-  									?>
+									
 									<div class="menu-list-item">
 										<!-- Heading / Dish name -->
-										<h4 class="pull-left"><?php echo $drinkNum. "." .$info[1]; ?></h4>
+										<h4 class="pull-left"></h4>
 										<!-- Dish price -->
-										<span class="price pull-right">$<?php echo $info[2]; ?></span>
+										<span class="price pull-right"></span>
 										<div class="clearfix"></div>
 									</div>
-									<?php } ?> 
+									
 									
 									
 								</div>
 
-								<div class="menu-list" id = "2" style="display:none">
-									<!-- Menu item heading -->
-									<h3>FRUIT TEA</h3>
-									<?php 
-  										for($i = 0; $i < mysql_num_rows($fruit); $i++){
-  										$info = mysql_fetch_row($fruit);
-  										$drinkNum = $i+ 24;
-  									?>
-									<div class="menu-list-item">
-										<!-- Heading / Dish name -->
-										<h4 class="pull-left"><?php echo $drinkNum. "." .$info[1]; ?></h4>
-										<!-- Dish price -->
-										<span class="price pull-right">$<?php echo $info[2]; ?></span>
-										<div class="clearfix"></div>
-									</div>
-									<?php } ?> 
-									
-									
-								</div>
+								
 
-								<div class="menu-list" id = "3" style="display:none">
-									<!-- Menu item heading -->
-									<h3>FRAPPE</h3>
-									<?php 
-  										for($i = 0; $i < mysql_num_rows($frappe); $i++){
-  										$info = mysql_fetch_row($frappe);
-  										$drinkNum = $i+ 31;
-  									?>
-									<div class="menu-list-item">
-										<!-- Heading / Dish name -->
-										<h4 class="pull-left"><?php echo $drinkNum. "." .$info[1]; ?></h4>
-										<!-- Dish price -->
-										<span class="price pull-right">$<?php echo $info[2]; ?></span>
-										<div class="clearfix"></div>
-									</div>
-									<?php } ?> 
-									
-									
-								</div>
-
-
-								<div class="menu-list" id = "4" style="display:none">
-									<!-- Menu item heading -->
-									<h3>TEA</h3>
-									<?php 
-  										for($i = 0; $i < mysql_num_rows($tea); $i++){
-  										$info = mysql_fetch_row($tea);
-  										$drinkNum = $i+ 35;
-  									?>
-									<div class="menu-list-item">
-										<!-- Heading / Dish name -->
-										<h4 class="pull-left"><?php echo $drinkNum. "." .$info[1]; ?></h4>
-										<!-- Dish price -->
-										<span class="price pull-right">$<?php echo $info[2]; ?></span>
-										<div class="clearfix"></div>
-									</div>
-									<?php } ?> 
-									
-								</div>
-
-
-								<div class="menu-list" id = "5" style="display:none">
-									<!-- Menu item heading -->
-									<h3>OTHERS</h3>
-									<?php 
-  										for($i = 0; $i < mysql_num_rows($others); $i++){
-  										$info = mysql_fetch_row($others);
-  										$drinkNum = $i+ 43;
-  									?>
-									<div class="menu-list-item">
-										<!-- Heading / Dish name -->
-										<h4 class="pull-left"><?php echo $drinkNum. "." .$info[1]; ?></h4>
-										<!-- Dish price -->
-										<span class="price pull-right">$<?php echo $info[2]; ?></span>
-										<div class="clearfix"></div>
-									</div>
-									<?php } ?> 
-									
-								</div>
+								
 							</div>
 				
 			
@@ -218,6 +134,8 @@
 			}
 			
 		}
+
+			
 
 
 		</script>

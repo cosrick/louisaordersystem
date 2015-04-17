@@ -9,11 +9,7 @@ Designed by : http://responsivewebinc.com
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
 
-@font-face {
-    font-family: 'Glyphicons Halflings';
-    src: url('../fonts/glyphicons-halflings-regular.eot');
-    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
-}
+
 
 /* 
  * Basic CSS starts
@@ -491,6 +487,11 @@ table { background: #fff; }
  * -	SETTINGS FOR BANNER CONTAINERS	-
  */
 
+
+#myCarousel{
+	height: 500px;
+	overflow: hidden;
+}
 /*.tp-banner-container{
 	width:100%;
 	position:relative;
@@ -2174,6 +2175,7 @@ div.ppt { display:none !important; }
 @media (max-width: 1200px){
 }
 .form-horizontal{
+	background-color: white;
 	margin-top: 50px;
 	border-top: 30px;
 	padding-top: 20px;
