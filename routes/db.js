@@ -20,14 +20,12 @@ var Menu = mongoose.model("Menu",Menu);//(modelName, Schema)
 
 
 
-var Account = mongoose.model('Account', AccountSchema, 'ACCOUNT')
-mongoose.connect ('mongodb://rick:rick830620@ds031561.mongolab.com:31561/louisacafe'function(err){
-	if(err)
-	{
+
+mongoose.connect ('mongodb://rick:rick830620@ds031561.mongolab.com:31561/louisacafe',function(err){
+	if(err){
 		console.log(err);
 	}
-	else
-	{
+	else{
 		console.log("Remote DB Connect!");
 	}
 });

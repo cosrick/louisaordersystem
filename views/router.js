@@ -25,6 +25,9 @@ index.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
     .state('menu', {
       url: "/menu",
       templateUrl: "template/menu.html"
+      controller('menuController', ['', function(){
+      	
+      }])
     })
     // .state('state2.list', {
     //   url: "/list",
