@@ -47,3 +47,35 @@ index.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
 });
 
 
+index.controller('indexLayoutCtrl', ['$scope','$http', function($scope,$http){
+  console.log('load index layoutCtrl')
+
+
+  
+  $scope.loadMenu = function(){
+    $http.get('/api/menu').success(function(data){
+      console.log(data);
+      // angular.forEach(data, function(val){
+      //   $scope.carousel.push(val);
+      // });
+    });
+  };
+  $scope.loadMenu();
+
+  /* News */
+  // $scope.news = [];
+  // $scope.lodaNews = function(){
+  //   $http.get('/api/index/news').success(function(data){
+  //     angular.forEach(data, function(val){
+  //       $scope.news.push(val);
+  //     });
+  //   });
+  // };
+  // $scope.lodaNews();
+
+  
+  
+
+}]);
+
+
