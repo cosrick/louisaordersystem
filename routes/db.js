@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var router = express.Router();
 var DB_password = process.env.DB_password;
 
-mongoose.connect ('mongodb://rick:' + DB_password + '@ds031561.mongolab.com:31561/louisacafe',function(err){
+mongoose.connect ('mongodb://rick:rick830620@ds031561.mongolab.com:31561/louisacafe',function(err){
 	if(err){
 		console.log(err);
 	}
@@ -24,9 +24,18 @@ mongoose.connect ('mongodb://rick:' + DB_password + '@ds031561.mongolab.com:3156
 		price 		: Number,
 		category	: String,
 	});
+	var OrderSchena = new Schema({
+		name : String,
+		email: String,
+		phoneNumber: String,
+		order: Object,
+		total: Number,
+		createAt: {type: Date, default: Date.now}
+	});
 
 
 	var Menu = mongoose.model("Menu",MenuSchema, "Menu");//(modelName, Schema)
+	var Order = mongoose.model("Order",OrderSchena,"Order");
 
 	// app.use(bodyParser.urlencoded());
 
