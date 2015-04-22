@@ -1,141 +1,55 @@
-			<div class="inner-page padd">
-			
-				<!-- Inner page menu start -->
-				<div class="inner-menu">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-4 col-sm-6">
-								<!-- Inner page menu list -->
-								<div class="menu-list">
-									<!-- Menu item heading -->
-									<h3>Drinks</h3>
-									<!-- Image for menu list -->
-									<img class="img-responsive" src="img/menu/beans-in-a-cup.jpg" alt="" />
-									<!-- Menu list items -->
-									<div class="menu-list-item" onclick="Print(0)">
-										<!-- Heading / Dish name -->
-										<a href="#" class="btn btn-danger btn-sm" >COFFEE</a>
-										<!-- Dish price -->
-										<span class="price pull-right"></span>
-										<div class="clearfix"></div>
-									</div>
-									<!-- Menu list items -->
-									<div class="menu-list-item" onclick="Print(1)">
-										<!-- Heading / Dish name -->
-										<a href="#" class="btn btn-danger btn-sm" >TAYLORS TEA</a>
-										<!-- Dish price -->
-										<span class="price pull-right"></span>
-										<div class="clearfix"></div>
-									</div>
-									<!-- Menu list items -->
-									<div class="menu-list-item" onclick="Print(2)">
-										<!-- Heading / Dish name -->
-										<a href="#" class="btn btn-danger btn-sm" >FRUIT TEA</a>
-										<!-- Dish price -->
-										<span class="price pull-right"></span>
-										<div class="clearfix"></div>
-									</div>
-									<!-- Menu list items -->
-									<div class="menu-list-item" onclick="Print(3)">
-										<!-- Heading / Dish name -->
-										<a href="#" class="btn btn-danger btn-sm" >FRAPPE</a>
-										<!-- Dish price -->
-										<span class="price pull-right"></span>
-										<div class="clearfix"></div>
-									</div>
-									<!-- Menu list items -->
-									<div class="menu-list-item " onclick="Print(4)" >
-										<!-- Heading / Dish name -->
-										<a href="#" class="btn btn-danger btn-sm" >TEA</a>
-										<!-- Dish price -->
-										<span class="price pull-right"></span>
-										<div class="clearfix"></div>
-									</div>
-									<!-- Menu list items -->
-									<div class="menu-list-item border-zero" onclick="Print(5)" >
-										<!-- Heading / Dish name -->
-										<a href="#" class="btn btn-danger btn-sm" >OTHERS</a>
-										<!-- Dish price -->
-										<span class="price pull-right"></span>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6">
-								<!-- Inner page menu list -->
-								<div class="menu-list" id = "0" style="display:block">
-									<!-- Menu item heading -->
-									<h3>COFFEE</h3>
-									<!-- Image for menu list 
-									<img class="img-responsive" src="img/menu/menu2.jpg" alt="" />-->
-									<!-- Menu list items -->
-									
-									<div class="menu-list-item">
-										<!-- Heading / Dish name -->
-										<h4 class="pull-left"></h4>
-										<!-- Dish price -->
-										<span class="price pull-right"></span>
-										<div class="clearfix"></div>
-									</div>
-									
-								</div>
-
-
-								<div class="menu-list" id = "1" style="display:none">
-									<!-- Menu item heading -->
-									<h3>TAYLORS TEA</h3>
-									
-									<div class="menu-list-item">
-										<!-- Heading / Dish name -->
-										<h4 class="pull-left"></h4>
-										<!-- Dish price -->
-										<span class="price pull-right"></span>
-										<div class="clearfix"></div>
-									</div>
-									
-									
-									
-								</div>
-
-								
-
-								
-							</div>
+<!-- Inner Content -->
+			<div class="inner-page padd" ng-controller="menuCtrl">
 				
-			
-					
-							
-
-
+				<!-- Shopping Start -->
+				
+				<div class="shopping">
+					<div class="container">
+						<div class="shopping-buttons">
+							<button class="btn btn-default" type="button">麵包</button>
+							<button class="btn btn-default" type="button">咖啡</button>
+						</div>
+						<!-- Shopping items content -->
+						<div class="shopping-content">
+							<div class="row">
+								<div class="col-md-3 col-sm-6" ng-repeat="singleItem in menu">
+									<!-- Shopping items -->
+									<div class="shopping-item">
+										<!-- Image -->
+										<a href="item-single.html"><img class="img-responsive" src="img/shopping/shop1.jpg" alt="" /></a>
+										<!-- Shopping item name / Heading -->
+										<h4 class="pull-left"><a href="item-single.html">{{singleItem.productName}}</a></h4>
+										<span class="item-price pull-right">{{singleItem.price}}</span>
+										<div class="clearfix"></div>
+										<!-- Paragraph -->
+										<p>{{singleItem.description}}</p>
+										<!-- Buy now button -->
+										<div class="visible-xs">
+											<a class="btn btn-danger btn-sm" href="#">Buy Now</a>
+										</div>
+										<!-- Shopping item hover block & link -->
+										<div class="item-hover br-red hidden-xs"></div>
+										<a class="link hidden-xs" href="#">Add to cart</a>
+									</div>
+								</div>
+								
+							</div>
+							<!-- Pagination -->
+							<div class="shopping-pagination">
+								<ul class="pagination">
+									<li class="disabled"><a href="#">&laquo;</a></li>
+									<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">&raquo;</a></li>
+								</ul>
+							</div>
+							<!-- Pagination end-->
 						</div>
 					</div>
 				</div>
-		<script type="text/javascript" language="javascript">
-
-
-			function HideContent(d) {
-			document.getElementById(d).style.display = "none";
-			}
-			function ShowContent(d) {
-			document.getElementById(d).style.display = "block";
-			}
-			function ReverseDisplay(d) {
-			if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
-			else { document.getElementById(d).style.display = "none"; }
-			}
-			function Print(d){
-				for (var i = 0; i < 6; i++){
-					if (i==d){
-						document.getElementById(i).style.display = "block";
-					}
-				else {
-					document.getElementById(i).style.display = "none";
-				}
-			}
-			
-		}
-
-			
-
-
-		</script>
+				
+				<!-- Shopping End -->
+			</div>

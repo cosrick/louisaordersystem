@@ -18,6 +18,22 @@ router.get('/',function(req,res){
 	});
 });
 
+router.post('/create',function(req,res){
+
+	var newMenu = new Schema();
+
+	newMenu.productName	= req.body.productName
+	newMenu.description = req.body.description
+	newMenu.price 		= req.body.price
+	newMenu.category	= req.body.category
+
+	console.log(req.body);
+	newMenu.save(function(err, data){
+		console.log(data);
+	})
+
+
+})
 
 // router.get('/id/:id',function(req,res){
 // 	return Menu.findById(req.params.id, function(err, menu){

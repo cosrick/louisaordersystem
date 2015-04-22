@@ -1,0 +1,80 @@
+			<!-- Inner Content -->
+			<div class="inner-page padd" ng-controller="addMenuCtrl">
+			
+				
+				<!-- Checkout Start -->
+				
+				<div class="checkout">
+					<div class="container">
+						<div class="row">
+
+						<div class="col-md-3">
+							<div class="profile">
+								<div class="containers well">
+									<div class="row">
+								        <div class="profile-image" >
+										    <img class ="img-circle" src="img/admin1.jpg" style="width:140px; height:140px">
+								        </div>
+								        
+					        <div class="profile">
+					            <h3>簡玲珊</h3>
+					            <h6>Email: MyEmail@servidor.com</h6>
+					            <h6>管理員權限</h6>
+					            <h6>Old: 1 Year</h6>
+					            <h6><a href="#">More... </a></h6>
+					        </div>
+							</div>
+							</div>
+							</div>
+						</div>
+
+							<div class="col-md-9 col-sm-6">
+							<!-- Heading -->
+							<h4>新增菜單品項</h4>
+								<!-- Checkout Form -->
+								<form class="form-horizontal" role="form" >
+								<!-- action="/api/menu/create" method="POST" -->
+									<div class="form-group">
+										<label for="inputName" class="col-md-2 control-label">品項名稱</label>
+										<div class="col-md-8">
+											<input type="text" class="form-control" ng-model="inputName" placeholder="Productname">
+										</div>
+									</div>            
+									<div class="form-group">
+										<label for="inputDescription"class="col-md-2 control-label">描述</label>
+										<div class="col-md-8">
+											<input type="text" class="form-control" ng-model="inputDescription" placeholder="description">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputPrice" class="col-md-2 control-label">價格</label>
+										<div class="col-md-8">
+											<input type="text" class="form-control" ng-model="inputPrice" placeholder="price">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputCategory" class="col-md-2 control-label">種類</label>
+										<div class="col-md-8">
+											<select class="form-control" ng-model="inputCategory" ng-options="select as label for value in array">
+												<option value="">----請選擇---麵包</option>
+												<option>咖啡</option>
+												<option>Pizza</option>
+											</select>
+										</div>
+									</div>              
+									
+									<div class="form-group">
+										<div class="col-md-offset-2 col-md-8">
+											<button type="submit" class="btn btn-danger btn-sm" ng-click="addNewMenu()">送出</button>&nbsp;
+											<button type="reset" class="btn btn-default btn-sm">重置</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+				<!-- Checkout End -->
+			</div>

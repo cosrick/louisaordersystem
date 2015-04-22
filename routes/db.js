@@ -26,7 +26,7 @@ mongoose.connect ('mongodb://rick:' + DB_password + '@ds031561.mongolab.com:3156
 	});
 
 
-	var Menu = mongoose.model("Menu",MenuSchema, "Menu");//(modelName, Schema)
+	var Menu = mongoose.model("Menu",MenuSchema, "Menu");//(modelName, Schema, theExistingSchemaName)
 
 	// app.use(bodyParser.urlencoded());
 

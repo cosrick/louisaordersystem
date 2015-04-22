@@ -1389,6 +1389,10 @@ div.ppt { display:none !important; }
 	margin: 0 auto;
 	text-align: center;
 }
+.shopping-buttons{
+	margin-bottom: 15px;
+	text-align: center;
+}
 
 /*
  * Shopping, Single item Page
@@ -1506,6 +1510,7 @@ div.ppt { display:none !important; }
  
 .inner-page .checkout { margin-top: 20px; margin-bottom: 20px; }
 .inner-page .checkout h4 {
+	font-family: 'Open Sans Condensed', sans-serif;
 	margin-top: 0;
 	margin-bottom: 20px;
 	padding-bottom: 6px;
