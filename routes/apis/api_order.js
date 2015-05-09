@@ -3,7 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Order = mongoose.model('Order');
 
-router.post('create',function (req,res){
+router.post('/create',function (req,res){
 	var newOrder = new Order();
 	newOrder.name = req.body.name;
 	newOrder.phoneNumber = req.body.phoneNumber;

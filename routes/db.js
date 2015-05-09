@@ -36,7 +36,6 @@ mongoose.connect ('mongodb://rick:rick830620@ds031561.mongolab.com:31561/louisac
 
 
 	var Menu = mongoose.model("Menu",MenuSchema, "Menu");//(modelName, Schema, theExistingSchemaName)
-	var Menu = mongoose.model("Menu",MenuSchema, "Menu");//(modelName, Schema)
 	var Order = mongoose.model("Order",OrderSchena,"Order");
 
 

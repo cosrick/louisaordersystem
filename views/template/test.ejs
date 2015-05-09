@@ -1,0 +1,37 @@
+<!-- 
+******************testing modal*************
+
+<div ng-controller="menuCtrl">
+    <button class="btn btn-default" ng-click="open()">Open me!</button>
+    <button class="btn btn-default" ng-click="open('lg')">Large modal</button>
+    <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
+    <button class="btn btn-default" ng-click="toggleAnimation()">Toggle Animation ({{ animationsEnabled }})</button>
+    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+</div> -->
+
+<div class="shopping-content" ng-controller="menuCtrl">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <!-- Shopping items -->
+            <div class="shopping-item">
+                <!-- Image -->
+                <a href="item-single.html"><img class="img-responsive" src="img/shopping/shop1.jpg" alt="" /></a>
+                <!-- Shopping item name / Heading -->
+                <h4 class="pull-left"><a href="item-single.html">{{singleMenuItem.productName}}</a></h4>
+                <span class="item-price pull-right">{{singleMenuItem.price}}</span>
+                <div class="clearfix"></div>
+                <!-- Paragraph -->
+                <p>{{singleMenuItem.description}}</p>
+                <!-- Buy now button -->
+                <div class="visible-xs">
+                    <a class="btn btn-danger btn-sm" href="#">Buy Now</a>
+                </div>
+                <!-- Shopping item hover block & link -->
+                <div class="item-hover br-red hidden-xs"></div>
+                <a class="link hidden-xs" href="#">Add to cart</a>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>

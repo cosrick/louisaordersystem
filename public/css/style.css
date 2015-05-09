@@ -49,6 +49,9 @@ a:hover,a:active,a:focus {
 hr{
 
 }
+.btn{
+	font-family: 'Open Sans Condensed', sans-serif;
+}
 
 :focus {
 	outline:none;
@@ -2195,3 +2198,6 @@ div.ppt { display:none !important; }
 	margin-bottom: 20px;
 	color: red;
 }
+
+
+

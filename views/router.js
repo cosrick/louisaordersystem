@@ -1,4 +1,4 @@
-var index = angular.module('index', ['ui.router']);
+var index = angular.module('index', ['ui.router','ui.bootstrap']);
 
 // , ['ngRoute']
 // index.config(['$routeProvider', '$locationProvider', function($routeProvider,$locationProvider){
@@ -37,62 +37,22 @@ index.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
     })
     .state('addMenu', {
       url: "/addMenu",
-      templateUrl: "template/addMenuItem.html"
+      templateUrl: "template/addMenuItem.html",
+      controller:'addMenuCtrl'
+    })
+    .state('test', {
+      url: "/test/:id",
+      templateUrl: "template/test.ejs",
+      controller:'menuCtrl'
+    })
+    .state('test1', {
+      url: "/test1",
+      templateUrl: "template/test1.ejs",
+      controller:'menuCtrl'
     });
 
 });
 
 
-index.controller('menuCtrl', ['$scope','$http', function($scope,$http){
-  console.log('load index layoutCtrl')
-
-
-  
-  $scope.loadMenu = function(){
-    $scope.menu = [];
-    $scope.itemNumber = 0;
-    $http.get('/api/menu').success(function(data){
-      angular.forEach(data, function(val){
-        $scope.menu.push(val);
-      });
-      $scope.itemNumber = $scope.menu.length;
-    });
-  };
-  $scope.loadMenu();
-
-}]);
-
-index.controller('addMenuCtrl', ['$scope,$timeout,$http', function($scope,$timeout,$http){
-  
-  scope.addMenuItemInterface = function(){
-    var newItem = {
-      productName:'',
-      description:'',
-      price:0,
-      category:''
-    }
-    $scope.newItems.push(newItem);
-    console.log(newItems);
-  }
-  $scope.addMenuItem = function(){
-    $http.post('/menu/'+id+'/addMenu', {
-      productName: newItem.productName,
-      description: newItem.description,
-      price: newItem.price,
-      category: newItem.category
-      
-    }).
-    success(function(data, status, headers, config) {
-      // console.log('success', data);
-      job.editMode = false;
-      job.status = 'update';
-      scope.refreshJob(data);
-    }).
-    error(function(data, status, headers, config) {
-      // console.log('error', data);
-    });
-  }
-
-}])
 
 
